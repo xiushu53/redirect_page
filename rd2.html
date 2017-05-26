@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>redirect_page</title>
+</head>
+<style>
+	p {
+		width: 70%;
+		text-align: center;
+		line-height: 150%;
+	}
+	a {
+		text-align: center;
+		line-height: 150%;
+	}
+</style>
+<body>
+	<p>アプリGoogle Mapsを起動します...</p><br/>
+	
+	<p>Google Maps が開かない場合、下のリンクをクリックしてください</p><br/>
+	
+	<a href="comgooglemaps://?daddr=35.729740,139.710240&directionsmode=transit">■ iPhone</a><br/>
+	<a href="maps.google.com/maps?daddr=35.729740,139.710240&directionsmode=transit">■ Android</a>
+
+	<script>
+		var ua = navigator.userAgent;
+		console.log(ua);
+
+		if (ua.match(/iPhone|iPad/)) {
+             window.location.href = "comgooglemaps://?daddr=35.729740,139.710240&directionsmode=transit";
+        }
+		else if (ua.match(/Android/)) {
+  			window.location.href = "maps.google.com/maps?daddr=35.729740,139.710240&directionsmode=transit";
+        }
+		else {
+  			window.location.href = "https://maps.google.com/maps?daddr=35.729740,139.710240&directionsmode=transit"
+		};
+	</script>
+
+</body>
+</html>
