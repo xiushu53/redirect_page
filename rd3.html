@@ -22,7 +22,7 @@
 	<p>Google Maps が開かない場合、下のリンクをクリックしてください</p><br/>
 	
 	<a href="comgooglemaps://?daddr=35.729113,139.711647&directionsmode=transit">■ iPhone</a><br/>
-	<a href="maps.google.com/maps?daddr=35.729113,139.711647&directionsmode=transit">■ Android</a>
+	<a href="http://maps.google.com/maps?daddr=35.729113,139.711647&directionsmode=transit">■ Android</a>
 
 	<script>
 		var ua = navigator.userAgent;
@@ -32,7 +32,7 @@
              window.location.href = "comgooglemaps://?daddr=35.729113,139.711647&directionsmode=transit";
         }
 		else if (ua.match(/Android/)) {
-  			window.location.href = "maps.google.com/maps?daddr=35.729113,139.711647&directionsmode=transit";
+  			window.location.href = "http://maps.google.com/maps?daddr=35.729113,139.711647&directionsmode=transit";
         }
 		else {
   			window.location.href = "https://maps.google.com/maps?daddr=35.729113,139.711647&directionsmode=transit"
